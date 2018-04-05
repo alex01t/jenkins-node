@@ -1,6 +1,9 @@
-
 ## Requirements
 	geerlingguy.java role ($ ansible-galaxy install geerlingguy.java)
+
+## Install
+	$ cd /etc/ansible/roles
+	$ git clone https://github.com/alex01t/jenkins-node.git
 
 ## Example Playbook
 
