@@ -1,10 +1,13 @@
 
+## Requirements
+	geerlingguy.java role ($ ansible-galaxy install geerlingguy.java)
+
 ## Example Playbook
 
 	- hosts: jnode1
 	  roles:
 	    - role: geerlingguy.docker
-	    - role: jenkins-slave
+	    - role: jenkins-node
 	      jenkins_authorized_key: ssh-rsa AAA...TBZUI9 jenkins@master-jenkins.lan
 	      # optional variables:
 	      jenkins_username: jenkins      # default: jenkins
