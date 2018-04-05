@@ -4,10 +4,17 @@
   user:
     name: '{{ jenkins_username }}'
     password: '{{ jenkins_password }}'
-    home: '{{ jenkins_home }}'
     shell: /bin/bash
     groups: '{{ jenkins_user_groups }}'
     state: present
+
+- name: Build home
+  file: 
+    path: '{{ jenkins_home }}'
+    owner: '{{ jenkins_username }}'
+    group: '{{ jenkins_username }}'
+    mode: 0700
+    state: directory
 
 - name: Add master public key to authorized keys
   authorized_key:
