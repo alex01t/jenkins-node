@@ -1,0 +1,7 @@
+---
+jenkins_authorized_key: null
+jenkins_home: /jenkins
+jenkins_username: jenkins
+jenkins_password: null
+jenkins_user_groups: null
+

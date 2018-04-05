@@ -1,0 +1,17 @@
+---
+
+- name: Ensure jenkins user
+  user:
+    name: '{{ jenkins_username }}'
+    password: '{{ jenkins_password }}'
+    home: '{{ jenkins_home }}'
+    shell: /bin/bash
+    groups: '{{ jenkins_user_groups }}'
+    state: present
+
+- name: Add master public key to authorized keys
+  authorized_key:
+    user: '{{ jenkins_username }}'
+    key: '{{ jenkins_authorized_key }}'
+
+
